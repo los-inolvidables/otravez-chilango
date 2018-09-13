@@ -1,33 +1,198 @@
 body, html{
   height:100%;
-
 }
+/* this is modifying the  homepage bakground */
 body{
-
-  background-image: url("./pic.jpg");
-  background-opacity: 0.1;
+  background-image: url("https://i.imgur.com/9mqRHqM.jpg?1");
   background-repeat: no-repeat;
   background-position: rigth top;
   background-attachment: fixed;
-  background-size: cover;
-
+  background-size: 1300px 680px,cover ;
 }
+/*this is for the header title*/
 h1{
-color:#4d1933;
-font-size: 80px;
+color:rgb(28, 207, 213);
+text-shadow: 4px 4px 6px  #000000;
 text-align: center;
+font-style: oblique;
+font-size:80px;
+    line-height: 0;
+}
+/*this is for the header subtitle*/
+h2{
+  text-align: center;
+  color:rgb(77, 162, 162) ;
+  font-size: 47px;
+  font-style: oblique;
+  text-shadow: 4px 4px 6px  #000000;
+}
+
+/* this is modifying the navigation bar */
+/* this is modifying the backgrown of nav bar */
+.navbar {
+    overflow: hidden;
+    background-color:rgb(116, 99, 107);
+    border line: hidden;
+}
+/* this is modifying the letters of main menu buttons */
+.navbar a {
+    float: left;
+    font-size: 30px;
+    color: white;
+    text-shadow: 4px 4px 6px  #000000;
+    font-style: oblique;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 
 }
-.list{
-  color:#4d1933;
-  font-size: 30px;
-  margin-left: 70;
+.subnav {
+    float: left;
+    overflow: hidden;
 }
-button{
-  color:#660066;
+/* this is modifying the main menu buttons or top bottons categories*/
+.subnav .subnavbtn {
+    font-size: 30px;
+    font-style: oblique;
+    border: none;
+    outline: none;
+    color: white;
+    text-shadow: 4px 4px 6px  #000000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+/* this is modifying the color of the hover from the main menu bottons */
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color:#3e8e41;
+}
+/* this is modifying the options inside each top button category */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color:#3e8e41 ;
+    width: 100%;
+    z-index: 1;
+}
+/* this is modifying the color of the hover from the options inside main buttons*/
+.subnav-content a {
+    float: left;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* this is modifying color of the letters when hovering the inside options of main buttons*/
+.subnav-content a:hover {
+    background-color:rgb(158, 227, 158);
+    color: black;
+    font-style: oblique;
+    font-size: 20px;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+}
+ /* this is for the typewriter component */
+ .Type{
+   color:rgb(157, 233, 31) ;
+   text-shadow: 4px 4px 6px  #000000;
+   font-style: oblique;
+   text-align: center;
+   font-size: 27px;
+ }
+/*this is to test letter color of the descriptions inside the components from the places*/
+ .route{
+   color:rgb(77, 162, 162) ;
+   text-shadow: 6px 6px 8px  #000000;
+   font-size: 25px;
+   font-style: oblique;
+ }
+ /*thie is for the likeButton*/
+ .btn {
+   align-self: auto;
+   box-shadow: 6px 6px 8px  #000000;
+ color:rgb(173, 154, 173);
+ font-style: oblique;
+ text-shadow: 6px 6px 8px  #000000;
+ font-size: 20px;
+ background-color:rgb(27, 41, 133);
+ border-color:rgb(13, 130, 142);
+ border-width: thick;
+
+
+}
+.btn2 {
+  align-self: auto;
+  box-shadow: 6px 6px 8px  #000000;
+color:rgb(173, 154, 173);
+font-style: oblique;
+text-shadow: 6px 6px 8px  #000000;
+font-size: 20px;
+background-color:rgb(27, 41, 133);
+border-color:rgb(13, 130, 142);
+border-width: thick;
+
+
+}
+.counter {
+  color:rgb(101, 177, 180);
+  font-size: 23px;
+}
+/*this is for the videos shadow*/
+.videos{
+   box-shadow: 0 15px 20px 0 rgba(0, 0, 5, 5), 0 15px 30px 0 rgba(0, 0, 5, 5);
+
+}
+/*this is changing box in forum name of event */
+.box1{
+  border-radius: 15px;
+  outline: none;
   font-size: 20px;
+  box-shadow: 0 9px #999;
+}
+
+/*this is changing box in forum description of event */
+.box2{
+  border-radius: 15px;
+  outline: none;
+  font-size: 30px;
+  box-shadow: 0 9px #999;
+}
+/*this is for submit button on forum description of event */
+.button2{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button2:hover {background-color: #3e8e41}
+
+.button2:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 
 }
-input{
-  font-size: 50px;
+/*this is for the text on the forum comment box*/
+.textbox{
+  color:rgb(222, 139, 139);
+  font-size:20px;
+}
+.posts{
+  color:#99ffcc;
+  font-size:30px;
+}
+.title1{
+  color:pink;
 }

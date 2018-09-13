@@ -1,35 +1,34 @@
 var express = require('express');
-var bodyParser = require('body-parser');
-// UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-var items = require('../database-mysql');
-// var items = require('../database-mongo');
-
 var app = express();
+var bodyParser = require('body-parser');
+var database = require('../database/index.js');
 
-// UNCOMMENT FOR REACT
+const path = require('path');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(express.static(__dirname + '/../react-client/dist'));
 
-// UNCOMMENT FOR ANGULAR
-// app.use(express.static(__dirname + '/../angular-client'));
-// app.use(express.static(__dirname + '/../node_modules'));
+app.get('/forum', function(req, res){
+  database.selectAll((err, results) => {
+     if(err) {
+       console.log('eror conecting to the database');
+       res.sendStatus(500);
+     } else {
+       res.status(200).json(results);
+     }
+   })
+})
 
-app.get('/items', function (req, res) {
-// console.log(res)
-  items.selectAll(function(err, results) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.status(200).json(results);
-    }
-    });
-});
-app.post('/items', function(req, res){
-  let task = req.body.task;
+app.post('/forum', function(req, res){
 
- if(!task) {
+ let description = req.body.description;
+ let description2 = req.body.description2;
+
+ if(!description) {
    res.sendStatus(400);
  } else {
-   test.insertOne(task, (err, results) => {
+   database.insertOne(description,description2,(err, results) => {
      if (err) {
        res.sendStatus(500);
      } else {
@@ -38,7 +37,41 @@ app.post('/items', function(req, res){
    });
  }
 });
+//up is for the forun requests
+// down is for the likes
+app.get('/', function(req, res){
+  database.selectLikes((err, results) => {
+     if(err) {
+       console.log('eror conecting to the database');
+       res.sendStatus(500);
+     } else {
+       res.status(200).json(results);
+     }
+   })
+})
 
+app.post('/', function(req, res){
+console.log(req.body)
+ let gustos = req.body.likes;
+
+ if(!gustos) {
+   res.sendStatus(400);
+   console.log("current likes",gustos);
+ } else {
+   database.insertLikes(gustos,(err, results) => {
+     if (err) {
+       console.log("this is to see whats going on",err);
+       res.sendStatus(500);
+     } else {
+       res.status(200).json(results);
+     }
+   });
+ }
+});
+
+ //  app.get('*', (req, res) => {
+ //   res.sendFile(path.resolve(__dirname + '/../react-client/dist/index.html'));
+ // });
 app.listen(3000, function() {
-  console.log('listening on port 3000!');
+  console.log('Server started and listening on port 3000');
 });
