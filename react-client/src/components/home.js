@@ -27,10 +27,17 @@ class Home extends React.Component{
           <br/>
           <br/>
           <br/>
-          
 
-          <AddLikes />
 
+
+        <div>
+        <AddLikes />
+
+          </div>
+
+          <div className="fb-share-button" data-href="https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp"
+          data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+          class="fb-xfbml-parse-ignore"></a>  </div>
           </div>
           </div>
 
