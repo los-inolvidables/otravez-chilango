@@ -48,7 +48,10 @@ class Main extends React.Component {
     return(
       <div>
 
-      <h2>find the weather </h2>
+      <h2>Weather Forecast </h2>
+      <p className="text1">Rain is very common in the city,</p>
+      <p className="text2">make sure you enjoy your day to the fullest,</p>
+      <p className="text3">check the weather here!!!</p>
 
       <Form getWeather={this.getWeather}/>
       <Weather

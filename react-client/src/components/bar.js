@@ -14,7 +14,7 @@ import {Link} from 'react-router-dom';
       <Link to="/planetario">Planetario</Link>
       <Link to="/papalote">Papalote Museo del Niño</Link>
       <Link to="/bellas">Palacio de Bellas Artes</Link>
-      <Link to="/more">Find more</Link>
+
     </div>
   </div>
   <div className="subnav">
@@ -38,7 +38,7 @@ import {Link} from 'react-router-dom';
     </div>
   </div>
   <Link to="/forum">Last minute events!</Link>
-  <Link to="/more">More!</Link>
+  <Link to="/more">Weather</Link>
 </div>
    </div>
  );

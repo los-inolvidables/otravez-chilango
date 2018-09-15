@@ -32,6 +32,7 @@ var selectLikes = function(cb) {
    if(err) {
      cb(err, null);
    } else {
+     console.log("marcoooo",results)
      cb(null, results);
    }
  });
@@ -46,9 +47,20 @@ var insertLikes = function(likes, cb) {
      }
    });
 };
+var getTotalLikes = function(likes, cb){
+  con.query("SELECT likes FROM likesbox ORDER BY id DESC LIMIT 1;",
+    (err,results,fields)=>{
+      if(err){
+        cb(err,null);
+      }else{
+        cb(results);
+      }
+    });
+};
 
 
 module.exports.selectAll = selectAll;
 module.exports.insertOne = insertOne;
 module.exports.selectLikes = selectLikes;
 module.exports.insertLikes = insertLikes;
+module.exports.getTotalLikes = getTotalLikes;
