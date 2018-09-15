@@ -196,3 +196,25 @@ border-width: thick;
 .title1{
   color:pink;
 }
+/*this is for the heather values of the weather info after submit*/
+.values{
+  color:#85e0e0;
+  font-size:20px;
+
+}
+/*this is for the script on the weather secction*/
+.text1{
+  color:#ffcc99;
+  font-size:30px;
+  allign:left;
+}
+.text2{
+  color:#ffcc99;
+  font-size:30px;
+  allign:center;
+}
+.text3{
+  color:#ffcc99;
+  font-size:30px;
+  allign:left;
+}

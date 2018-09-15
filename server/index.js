@@ -39,7 +39,7 @@ app.post('/forum', function(req, res){
 });
 //up is for the forun requests
 // down is for the likes
-app.get('/', function(req, res){
+app.get('/likes', function(req, res){
   database.selectLikes((err, results) => {
      if(err) {
        console.log('eror conecting to the database');
@@ -50,7 +50,7 @@ app.get('/', function(req, res){
    })
 })
 
-app.post('/', function(req, res){
+app.post('/likes', function(req, res){
 console.log(req.body)
  let gustos = req.body.likes;
 

@@ -32,6 +32,7 @@ var selectLikes = function(cb) {
    if(err) {
      cb(err, null);
    } else {
+     console.log("marcoooo",results)
      cb(null, results);
    }
  });
