@@ -206,15 +206,15 @@ border-width: thick;
 .text1{
   color:#ffcc99;
   font-size:30px;
-  allign:left;
+  text-align: left;
 }
 .text2{
   color:#ffcc99;
   font-size:30px;
-  allign:center;
+   text-align: center;
 }
 .text3{
   color:#ffcc99;
   font-size:30px;
-  allign:left;
+   text-align: rigth;
 }

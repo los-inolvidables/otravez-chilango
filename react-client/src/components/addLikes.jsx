@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from "jquery";
+import getTotalLikes from "../../../database/index.js";
 
 class AddLikes extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class AddLikes extends React.Component {
         likes: this.state.likes
       })
     }).done(() => {
-      this.getLikePost();
+      // this.getLikePost();
     });
   }
 
@@ -30,8 +31,14 @@ class AddLikes extends React.Component {
      url: '/likes',
      method: 'GET',
      success: (likes) => {
-       console.log("this is results"+likes)
-       this.setState({likes:this.state.likes});
+       var likesArray=JSON.stringify(likes);
+       console.log("this is results " + likesArray)
+       if(likes){
+         likes.forEach((item) =>{
+           this.setState({likes: item.likes+1});
+         })
+       }
+       getTotalLikes(null, (results)=> console.log(`Here are the ${results}`));
      },
      error: (xhr, err) => {
        console.log('err', err);
@@ -40,12 +47,12 @@ class AddLikes extends React.Component {
  }
  componentDidMount(){
    this.getLikePost()
-    }
+  }
   Like (){
-    this.setState(function(prevState, props){
-      return{likes:prevState.likes+1};
+    this.setState({
+    likes:this.state.likes+1
     });
-    console.log("this is the state " , this.state.likes);
+    //console.log("this is the state " , this.state.likes);
   }
 
 
