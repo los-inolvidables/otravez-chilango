@@ -13,7 +13,6 @@ class AddLikes extends React.Component {
   }
 
   addLikePost(likes){
-    console.log("likes front end ", this.state.likes);
     $.ajax({
       method: 'POST',
       url:'/likes',
@@ -32,7 +31,7 @@ class AddLikes extends React.Component {
      method: 'GET',
      success: (likes) => {
        var likesArray=JSON.stringify(likes);
-       console.log("this is results " + likesArray)
+
        if(likes){
          likes.forEach((item) =>{
            this.setState({likes: item.likes+1});
@@ -52,7 +51,6 @@ class AddLikes extends React.Component {
     this.setState({
     likes:this.state.likes+1
     });
-    //console.log("this is the state " , this.state.likes);
   }
 
 
@@ -62,16 +60,14 @@ two(){
 }
   render () {
     return(
-      <div className="counter">
-
+      <div className="Type">
+      <p className="Type"> Dont forget to like and share!! </p>
        <h3>{this.state.likes}
-       {console.log(this.state.likes)}
        <button className="btn" onClick={this.two}>
        <img src="https://i.imgur.com/U7C5R53.jpg?5"/></button>
        </h3>
       </div>
     );
   }
-
 }
 export default AddLikes;

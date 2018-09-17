@@ -31,8 +31,7 @@ var selectLikes = function(cb) {
  con.query('SELECT * FROM likesbox', (err, results, fields)=> {
    if(err) {
      cb(err, null);
-   } else {
-     console.log("marcoooo",results)
+   } else {     
      cb(null, results);
    }
  });

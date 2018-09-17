@@ -3,7 +3,6 @@ import React from 'react';
 
 const Desierto =()=>{
   return(
-
     <div className= "route">
     <div>
       <div>
