@@ -9,6 +9,6 @@ const Weather =props=>(
       {props.description && <p>Conditions: {props.description}</p>}
       {props.error && <p>{props.error}</p>}
     </div>
-  )
+  );
 
 export default Weather;

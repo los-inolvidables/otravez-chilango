@@ -23,8 +23,7 @@ class Main extends React.Component {
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=f4a9036302d02ec9c3137278337d8c03&units=imperial`);
     const data = await api_call.json();
 
-    if (city && country){
-      console.log(data);
+    if (city && country){      
       this.setState({
         temperature: data.main.temp,
         city: data.name,
@@ -51,7 +50,7 @@ class Main extends React.Component {
       <h2>Weather Forecast </h2>
       <p className="text1">Rain is very common in the city,</p>
       <p className="text2">make sure you enjoy your day to the fullest,</p>
-      <p className="text3">check the weather here!!!</p>
+      <p className="text3">check out the weather here!!!</p>
 
       <Form getWeather={this.getWeather}/>
       <Weather

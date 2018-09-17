@@ -10,7 +10,7 @@ const Marqueza =()=>{
     <div className= "route">
     <center><iframe className= "videos" width="560" height="315"
      src="https://www.youtube.com/embed/NX7rrZ7iVgo?autoplay=1&controls=0&&showinfo=0"
-     frameBorder="0" 
+     frameBorder="0"
      allowFullScreen></iframe></center>
      <br/>
      <br/>
@@ -21,8 +21,6 @@ const Marqueza =()=>{
      Near the village of La Marquesa are three large bronze statues of men on horseback looking east toward Mexico City. They are the national heroes Miguel Hidalgo, Ignacio Allende, and Mariano Jiménez. The memorial commemorates the Battle of Monte de las Cruces, which took place here in October 1810. La Marquesa is in the ejido of San Jerónimo Acazulco, of the indigenous Otomí community.</p>
      </div>
      </div>
-
-
   );
 };
 
