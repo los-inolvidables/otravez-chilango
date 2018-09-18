@@ -48,7 +48,7 @@ app.get('/likes', function(req, res){
 })
 
 app.post('/likes', function(req, res){
-console.log(req.body)
+
  let gustos = req.body.likes;
 
  if(!gustos) {
