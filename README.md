@@ -21,3 +21,4 @@ Chilango Life is meant for people that is not from or familiar with the city and
 
 # Tools used for this proyect
 We used react type writer for letters on the homepage, react for the front-end, facebook and twitter share features, react router to create different links on the navigation bar, openweather api for the weather section to display the weather. We used mysql data base to connect the forum and like button, jquery ajax requests for post and get request of the forum and the like button, express and node.  
+o9
